@@ -11,7 +11,7 @@ describe('Todo List', () => {
 
   it('adds an item to the list', () => {
     const todolist = [{
-      item: 'item one',
+      value: 'item one',
       index: 1
     }]
     const wrapper = shallow(<TodoApp todoItems={todolist}/>)
@@ -21,7 +21,7 @@ describe('Todo List', () => {
 
   it('checks an item on the list', () => {
     const todolist = [{
-      item: 'item one',
+      value: 'item one',
       index: 1,
       markTodoDone: false
     }]
@@ -34,7 +34,7 @@ describe('Todo List', () => {
 
   it('deletes an item off the list', () => {
     const todolist = [{
-      item: 'item one',
+      value: 'item one',
       index: 1,
       markTodoDone: false
     }]
