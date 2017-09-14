@@ -39,7 +39,7 @@ class TodoListItem extends Component {
       <li className="list-group-item ">
         <div className={todoClass}>
           <span className="glyphicon glyphicon-ok icon" aria-hidden="true" onClick={this.onClickDone}></span>
-          {this.props.item.item}
+          {this.props.item.value}
           <button type="button" className="close" onClick={this.onClickClose}>&times;</button>
         </div>
       </li>
@@ -86,7 +86,7 @@ class TodoApp extends Component {
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
     this.markTodoDone = this.markTodoDone.bind(this);
-    this.state = {todoItems: props.todoItems};
+    this.state = {todoItems: props.todoItems || []};
   }
   addItem(todoItem) {
     if (this.state.todoItems) {
